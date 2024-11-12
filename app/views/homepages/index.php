@@ -14,7 +14,7 @@
 
             <a href="<?= URLROOT; ?>/Countries/index">Landen van de Wereld</a> |
 
-            <a href="<?= URLROOT; ?>/Countries/index">Overzicht Magazijn Jamin </a> |
+            <a href="<?= URLROOT; ?>/Warehouses/index">Overzicht Magazijn Jamin </a> |
 
             
 

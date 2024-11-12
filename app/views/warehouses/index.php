@@ -15,7 +15,6 @@
         <div class="col-2"></div>
         <div class="col-8">
             <h3><?= $data['title']; ?></h3>
-            <p><a href="<?= URLROOT; ?>/products/create">Nieuw product toevoegen</a></p> <!-- Voeg hier eventueel een link toe voor nieuwe producten -->
         </div>
         <div class="col-2"></div>
     </div>
@@ -32,7 +31,7 @@
     <div class="row mt-3">
         <div class="col-2"></div>
         <div class="col-8">
-            <table class="table table-bordered table-hover">
+            <table class="table table-bordered">
                 <thead>
                     <tr>
                         <th>Barcode</th>
@@ -51,13 +50,11 @@
                                 <td><?= htmlspecialchars($row->Naam); ?></td>
                                 <td><?= htmlspecialchars($row->VerpakkingsEenheid); ?></td>
                                 <td><?= htmlspecialchars($row->AantalAanwezig); ?></td>
-                                <td><?= htmlspecialchars($row->AllergenenInfo); ?></td>
-                                <td><?= htmlspecialchars($row->LeverantieInfo); ?></td> 
                             </tr>
                         <?php endforeach; ?>
                     <?php else: ?>
                         <tr>
-                            <td colspan="6" class="text-center">Geen gegevens gevonden.</td> 
+                            <td colspan="4" class="text-center">Geen gegevens gevonden.</td>
                         </tr>
                     <?php endif; ?>
                 </tbody>
