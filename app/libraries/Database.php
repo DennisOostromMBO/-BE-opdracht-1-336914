@@ -62,8 +62,24 @@ class Database
      */
     public function bind($parameter, $value, $type = null)
     {
+        // Controleer of de $type null is, en stel het type in op basis van de waarde
+        if (is_null($type)) {
+            // Bepaal het type van de waarde
+            if (is_int($value)) {
+                $type = PDO::PARAM_INT;
+            } elseif (is_bool($value)) {
+                $type = PDO::PARAM_BOOL;
+            } elseif (is_null($value)) {
+                $type = PDO::PARAM_NULL;
+            } else {
+                $type = PDO::PARAM_STR; // Standaard type is een string
+            }
+        }
+    
+        // Bind de waarde met het juiste type
         $this->statement->bindValue($parameter, $value, $type);
     }
+    
 
     /**
      * Deze methode voert de query uit

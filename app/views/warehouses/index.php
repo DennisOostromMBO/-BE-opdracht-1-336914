@@ -50,6 +50,8 @@
                                 <td><?= htmlspecialchars($row->Naam); ?></td>
                                 <td><?= htmlspecialchars($row->VerpakkingsEenheid); ?></td>
                                 <td><?= htmlspecialchars($row->AantalAanwezig); ?></td>
+                                <td><a href="<?= URLROOT; ?>/warehouses/allergenDetails/<?= $row->ProductId; ?>">X</a></td>
+                                <td><a href="<?= URLROOT; ?>/warehouses/leverantie/<?= $row->ProductId; ?>">?</a></td>
                             </tr>
                         <?php endforeach; ?>
                     <?php else: ?>

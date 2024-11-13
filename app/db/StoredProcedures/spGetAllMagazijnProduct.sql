@@ -29,7 +29,7 @@ BEGIN
     INNER JOIN Product AS PROD
             ON PROD.Id = MAGA.ProductId
 
-    ORDER BY PROD.Id ASC;
+    ORDER BY PROD.Barcode ASC;
 
 END //
 DELIMITER ;
